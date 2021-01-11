@@ -13,3 +13,7 @@ pom.xml.asc
 node_modules
 resources
 out/
+.shadow-cljs
+.clj-kondo
+public
+.calva
