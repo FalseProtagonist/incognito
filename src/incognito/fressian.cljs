@@ -9,10 +9,11 @@
 ;;add incognito record-writer-handlers
 (defn record-writer
   [write-handlers]
-  (fn [writer rec]
+  (fn [writer rec rec->tag]
+    ;; (println "calling incognito record-writer")
     (let [{:keys [tag value] :as r} (if (isa? (type rec) incognito.base.IncognitoTaggedLiteral)
                                       (into {} rec)
-                                      (incognito-writer @write-handlers rec))
+                                      (incognito-writer @write-handlers rec rec->tag))
           tag                    (-> tag
                                      str
                                      (clojure.string/replace-first  #"/" ".")
