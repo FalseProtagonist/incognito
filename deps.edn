@@ -7,7 +7,10 @@
         fress/fress                {
                                    ;;  :git/url "https://github.com/groundedSAGE/fress.git"
                                    ;;  :sha "911405e5768937c9af99b943b15563e47dfa5ae3"
-                                   :local/root "../fress_sage"
+                                   ;; :local/root "../fress_sage"
+                                   :git/url "git@github.com:falseprotagonist/fress" 
+                                   :sha "19d5222c11b5c56fc36293ec5e6a8a47e5e3274d"
+                                   
                                     }
         }
  :aliases {:cljs {:extra-deps {thheller/shadow-cljs {:mvn/version "2.10.21"}
